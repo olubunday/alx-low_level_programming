@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * main - prints all combination of single digits
@@ -6,16 +7,16 @@
  */
 int main(void)
 {
-	int n;
+	int c = 0;
 
-	for (n = 48; n < 58; n++)
-
-	putchar(n);
-		if (n != 57)
+	while (c < 10)
+	{
+		putchar(48 + c);
+		if (c != 9)
 		{
 			putchar(',');
 			putchar(' ');
 		}
-	putchar('\n');
-	return (0);
+		c++;
+	}
 }
