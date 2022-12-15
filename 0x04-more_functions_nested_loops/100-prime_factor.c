@@ -11,14 +11,14 @@ int main(void)
 	long int n, fp;
 
 	n = 612852475143;
-	for (fp = 2; fp <= n; fp++)
+	for (fp = 2; fp < n; fp++)
 	{
 		if (n % fp == 0)
 		{
-			n /= fp;
+			n = n / fp;
 			fp--;
 		}
 	}
-	printf("%ld\n", fp);
+	printf("%lu\n", fp);
 	return (0);
 }
