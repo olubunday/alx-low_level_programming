@@ -7,6 +7,7 @@
 
 int main(void)
 {
+
 	int p = 100;
 	int i;
 
@@ -15,7 +16,7 @@ int main(void)
 	{
 		if (i % 3 == 0 && i % 5 == 0)
 		{
-			printf("Fizz Buzz ");
+			printf("FizzBuzz ");
 		}
 		else if (1 % 3 == 0)
 		{
