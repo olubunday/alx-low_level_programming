@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main -entry point
+ * main - entry point
  * Return: void
  */
 
@@ -18,7 +18,7 @@ int main(void)
 		{
 			printf("FizzBuzz ");
 		}
-		else if (1 % 3 == 0)
+		else if (i % 3 == 0)
 		{
 			printf("Fizz ");
 		}
