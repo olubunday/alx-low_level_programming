@@ -2,10 +2,10 @@
 
 /**
  * _putchar - wiritten character c to stdout
- * @c: character to be printed
+ * @c: char to be printed
  * Return: On success 1
  */
-int _puchar(char c)
+int _putchar(char c)
 {
-	return (write(i, &c, 1));
+	return (write(1, &c, 1));
 }
