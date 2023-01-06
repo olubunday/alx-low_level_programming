@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <ctype.h>
 #include <string.h>
-#include <stdlib>
+#include <stdlib.h>
 
 /**
  * main - adds positive numbers
