@@ -38,6 +38,12 @@ char *str_concat(char *s1, char *s2)
 	i = 0;
 	while (i < len1)
 	{
+		nstr[i] = s1[i];
+		i++;
+	}
+	j = 0;
+	while (i <= size)
+	{
 		nstr[i] = s2[j];
 		i++;
 		j++;
