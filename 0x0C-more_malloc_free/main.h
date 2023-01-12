@@ -10,5 +10,6 @@ int _putchar(char c);
 void _puts(char *str);
 int _atoi(const char *s);
 void print_int(unsigned long int n);
+int _strlen(char *string);
 
 #endif
