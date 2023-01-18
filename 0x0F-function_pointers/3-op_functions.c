@@ -38,7 +38,7 @@ int op_mul(int a, int b)
 * @a: integer
 * @b: integer
 *
- * Return: quotient
+* Return: quotient
 */
 int op_div(int a, int b)
 {
