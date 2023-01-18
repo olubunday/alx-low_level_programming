@@ -11,7 +11,7 @@ int op_add(int a, int b)
 	return (a + b);
 }
 /**
-* op_sub - returns difference of 2 2 numbers
+* op_sub - returns difference of 2 numbers
 * @a: integer
 * @b: integer
 *
