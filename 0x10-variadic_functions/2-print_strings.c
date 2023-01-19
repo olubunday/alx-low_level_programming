@@ -2,7 +2,7 @@
 #include <stdarg.h>
 #include <stdlib.h>
 /**
-* print_strings - prints followed a new line
+* print_strings - prints strrings followed a new line
 * @separator: string to be printed between strings
 * @n: number of strings
 *
@@ -17,6 +17,8 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	if (separator == NULL)
 		separator = "";
 
+	va_start(strings, n);
+
 	for (i = 0; i < n; i++)
 	{
 		s = va_arg(strings, char *);
@@ -24,7 +26,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		if (s == NULL)
 			s = "(nil)";
 		printf("%s", s);
-		if (i < n -1)
+		if (i < n - 1)
 		{
 			printf("%s", separator);
 		}
