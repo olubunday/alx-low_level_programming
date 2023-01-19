@@ -45,6 +45,7 @@ void print_all(const char * const format, ...)
 		separator = ", ";
 		i++;
 	}
+
 	printf("\n");
 	va_end(args);
 }
