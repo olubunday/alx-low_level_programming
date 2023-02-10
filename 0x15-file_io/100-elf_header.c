@@ -29,10 +29,10 @@ void check_elf(unsigned char *e_ident)
 
 	for (index = 0; index < 4; index++)
 	{
-	if (e_ident[index] != 127 &&
-		e_ident[index] != 'E' &&
-		e_ident[index] != 'L' &&
-		e_ident[index] != 'F')
+		if (e_ident[index] != 127 &&
+		    e_ident[index] != 'E' &&
+		    e_ident[index] != 'L' &&
+		    e_ident[index] != 'F')
 		{
 			dprintf(STDERR_FILENO, "Error: Not an ELF file\n");
 			exit(98);
@@ -130,8 +130,9 @@ void print_version(unsigned char *e_ident)
 		break;
 	}
 }
+
 /**
-* print_osabi - Prints the OS/ABI of an ELF header.
+* print_osabi - Prints the OS/ABI of an ELF header
 * @e_ident: A pointer to an array containing the ELF version.
 */
 void print_osabi(unsigned char *e_ident)
@@ -164,7 +165,7 @@ void print_osabi(unsigned char *e_ident)
 	case ELFOSABI_TRU64:
 		printf("UNIX - TRU64\n");
 		break;
-	case ELFOSABI_ARM
+	case ELFOSABI_ARM:
 		printf("ARM\n");
 		break;
 	case ELFOSABI_STANDALONE:
@@ -265,7 +266,7 @@ void close_elf(int elf)
 * @argv: An array of pointers to the arguments.
 *
 * Return: 0 on success.
-* 
+*
 * Description: If the file is not an ELF File or
 * the function fails - exit code 98.
 */
@@ -310,4 +311,4 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 	free(header);
 	close_elf(o);
 	return (0);
-}	
+}
