@@ -9,22 +9,19 @@
 
 int main(void)
 {
-	int ones = '0';
-	int tens = '0';
+	int ones;
+	int tens;
 
-	for (tens = '0'; tens <= '9'; tens++)
+	for (tens = 0; tens < 9; tens++)
 	{
-		for (ones = '0'; ones <= '9'; ones++)
+		for (ones = tens + 1; ones < 10; ones++)
 		{
-			if (!((ones == tens) || (tens > ones)))
+			putchar(tens + '0');
+			putchar(ones + '0');
+			if (tens != 8 || ones != 9)
 			{
-				putchar(tens);
-				putchar(ones);
-				if (!(ones == '9' && tens == 'g'))
-				{
-					putchar(',');
-					putchar(' ');
-				}
+				putchar(',');
+				putchar(' ');
 			}
 		}
 	}
