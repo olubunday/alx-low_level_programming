@@ -1,4 +1,5 @@
 #include "hash_tables.h"
+
 /**
  * shash_table_create - creates a sorted hash table
  * @size: size of the hash table
@@ -28,6 +29,7 @@ shash_table_t *shash_table_create(unsigned long int size)
 	}
 	return (sht);
 }
+
 /**
  * make_shash_node - makes a node for the sorted hash table
  * @key: key for the data
@@ -58,6 +60,7 @@ shash_node_t *make_shash_node(const char *key, const char *value)
 	shn->next = shn->snext = shn->sprev = NULL;
 	return (shn);
 }
+
 /**
  * add_to_sorted_list - add a node to the sorted (by key's ASCII) linked list
  * @table: the sorted hash table
