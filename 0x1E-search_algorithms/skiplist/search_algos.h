@@ -1,15 +1,20 @@
-#ifndef _SEARCH_ALGOS_H_
-#define _SEARCH_ALGOS_H_
+#ifndef SEARCH_ALGOS
+#define SEARCH_ALGOS
 
-#include <stddef.h>
+#include <stdio.h>
 #include <stdlib.h>
+#include <unistd.h>
 
 /**
- * struct listint_s - simple linked list nodes
- * @n: value in this node
- * @index: index in the list
- * @next: pointer to next node in the list
+ * struct listint_s - singly linked list
+ *
+ * @n: Integer
+ * @index: Index of the node in the list
+ * @next: Pointer to the next node
+ *
+ * Description: singly linked list node structure
  */
+
 typedef struct listint_s
 {
 	int n;
@@ -18,11 +23,14 @@ typedef struct listint_s
 } listint_t;
 
 /**
- * struct skiplist_s - skip list nodes
- * @n: value in this node
- * @index: index of this node in list
- * @next: pointer to next node in list
- * @express: pointer to node further ahead in list
+ * struct skiplist_s - Singly linked list with an express lane
+ *
+ * @n: Integer
+ * @index: Index of the node in the list
+ * @next: Pointer to the next node
+ * @express: Pointer to the next node in the express lane
+ *
+ * Description: singly linked list node structure with an express lane
  */
 typedef struct skiplist_s
 {
@@ -34,11 +42,21 @@ typedef struct skiplist_s
 
 int linear_search(int *array, size_t size, int value);
 int binary_search(int *array, size_t size, int value);
+int binary_helper(int *array, int value, size_t lo, size_t hi);
+void print_array(int *array, size_t lo, size_t hi);
 int jump_search(int *array, size_t size, int value);
 int advanced_binary(int *array, size_t size, int value);
 int exponential_search(int *array, size_t size, int value);
+int interpolation_search(int *array, size_t size, int value);
+int jump_search(int *array, size_t size, int value);
+int rec_search(int *array, size_t size, int value);
 listint_t *jump_list(listint_t *list, size_t size, int value);
 skiplist_t *linear_skip(skiplist_t *list, int value);
-int interpolation_search(int *array, size_t size, int value);
+listint_t *create_list(int *array, size_t size);
+void print_list(const listint_t *list);
+void free_list(listint_t *list);
+skiplist_t *create_skiplist(int *array, size_t size);
+void print_skiplist(const skiplist_t *list);
+void free_skiplist(skiplist_t *list);
 
 #endif

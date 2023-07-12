@@ -1,6 +1,6 @@
-#include <math.h>
 #include <stdio.h>
 #include "search_algos.h"
+#include <math.h>
 
 /**
  * jump_list - Searches for a value in a sorted singly
